@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="Pixel" customModuleProvider="target">
+            <connections>
+                <outlet property="cacheSize" destination="hJ2-Mf-6eI" id="XAb-xu-I9a"/>
+                <outlet property="logoutButton" destination="R7Y-h0-8yZ" id="VjR-ja-nk1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vt-3G-tLu">
+                    <rect key="frame" x="0.0" y="160" width="600" height="48"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="DMl-6K-0Dp"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="关于 Pixel">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="about:" destination="-1" eventType="touchUpInside" id="IY9-e4-o7V"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccd-4N-uTS">
+                    <rect key="frame" x="0.0" y="209" width="600" height="48"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Zl5-X5-eNV"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="在 App Store 给 Pixel 评分">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="review:" destination="-1" eventType="touchUpInside" id="JXO-f3-4Um"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7Y-h0-8yZ">
+                    <rect key="frame" x="0.0" y="265" width="600" height="48"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="TU8-f9-c3k"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="退出">
+                        <color key="titleColor" red="0.99607843137254903" green="0.2196078431372549" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchUpInside" id="NUy-uT-X8t"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-PV-RpZ">
+                    <rect key="frame" x="576" y="177" width="8" height="13"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-ms-a8b">
+                    <rect key="frame" x="0.0" y="62" width="600" height="48"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="6uV-o2-ip3"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="清理缓存">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clear:" destination="-1" eventType="touchUpInside" id="U3V-6i-pDT"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 MB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-Mf-6eI">
+                    <rect key="frame" x="544" y="76" width="40" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efy-tL-1Py">
+                    <rect key="frame" x="0.0" y="111" width="600" height="48"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="反馈信息">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="feedback:" destination="-1" eventType="touchUpInside" id="Col-SK-GwB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ccd-4N-uTS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5l7-aX-d5d"/>
+                <constraint firstItem="ccd-4N-uTS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7rr-2B-Dw9"/>
+                <constraint firstItem="hJ2-Mf-6eI" firstAttribute="centerY" secondItem="h5u-ms-a8b" secondAttribute="centerY" id="Cki-Ws-zbg"/>
+                <constraint firstItem="efy-tL-1Py" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K7j-iN-mNX"/>
+                <constraint firstAttribute="trailing" secondItem="hJ2-Mf-6eI" secondAttribute="trailing" constant="16" id="Ojo-RU-MVc"/>
+                <constraint firstItem="efy-tL-1Py" firstAttribute="width" secondItem="h5u-ms-a8b" secondAttribute="width" id="Sbi-Zu-67o"/>
+                <constraint firstItem="3Vt-3G-tLu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="UVt-kg-stl"/>
+                <constraint firstItem="ccd-4N-uTS" firstAttribute="top" secondItem="3Vt-3G-tLu" secondAttribute="bottom" constant="1" id="UgJ-Xc-dvr"/>
+                <constraint firstItem="h5u-ms-a8b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="Vtw-JI-7AP"/>
+                <constraint firstItem="3Vt-3G-tLu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WqU-4W-xA1"/>
+                <constraint firstItem="efy-tL-1Py" firstAttribute="top" secondItem="h5u-ms-a8b" secondAttribute="bottom" constant="1" id="eXI-uM-7rm"/>
+                <constraint firstItem="efy-tL-1Py" firstAttribute="height" secondItem="h5u-ms-a8b" secondAttribute="height" id="egz-yS-IZR"/>
+                <constraint firstItem="M1m-PV-RpZ" firstAttribute="centerY" secondItem="3Vt-3G-tLu" secondAttribute="centerY" id="joc-2r-u6V"/>
+                <constraint firstItem="h5u-ms-a8b" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="lKV-vx-JMY"/>
+                <constraint firstAttribute="trailing" secondItem="M1m-PV-RpZ" secondAttribute="trailing" constant="16" id="lby-w0-RXx"/>
+                <constraint firstItem="R7Y-h0-8yZ" firstAttribute="top" secondItem="ccd-4N-uTS" secondAttribute="bottom" constant="8" id="mPr-2l-6nb"/>
+                <constraint firstItem="R7Y-h0-8yZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="pb9-J8-rRt"/>
+                <constraint firstItem="h5u-ms-a8b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qCn-qO-XHA"/>
+                <constraint firstItem="R7Y-h0-8yZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rqG-SB-1WZ"/>
+                <constraint firstItem="3Vt-3G-tLu" firstAttribute="top" secondItem="efy-tL-1Py" secondAttribute="bottom" constant="1" id="uqc-Nn-w3E"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow" width="8" height="13"/>
+    </resources>
+</document>
