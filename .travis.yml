@@ -1,0 +1,13 @@
+language: objective-c
+ 
+branches:
+ only:
+ - master
+ 
+xcode_project: Pixel.xcodeproj
+xcode_scheme: Pixel 
+osx_image: xcode7.2
+xcode_sdk: iphonesimulator9.2 
+ 
+script:
+- xcodebuild clean build test -project Pixel.xcodeproj -scheme Pixel 
