@@ -93,17 +93,16 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
         }
         
         populatingPhotos = true
-//        NSLog("start fetch photos -----> \(requestType)")
         Alamofire.request(request)
             .responseSwiftyJSON { response in
                 guard let json = response.result.value else {
                     self.populatingPhotos = false
                     return
                 }
-            self.parseJSON(json)
-            self.collectionView.mj_header.endRefreshing()
-            self.collectionView.mj_footer.endRefreshing()
-            
+                self.parseJSON(json)
+                self.collectionView.mj_header.endRefreshing()
+                self.collectionView.mj_footer.endRefreshing()
+                
         }
     }
     
@@ -117,7 +116,7 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
             let lastItem = self.photos.count
             for (_, subJson):(String, JSON) in json["photos"] {
                 
-                if let id = subJson["id"].int, name = subJson["name"].string, width = subJson["width"].int, height = subJson["height"].int, desc = subJson["description"].string {
+                if let id = subJson["id"].int, name = subJson["name"].string, width = subJson["width"].int, height = subJson["height"].int, desc = subJson["description"].string where subJson["nsfw"].bool == false {
                     let photoInfo = PhotoInfo(id: id, name: name, width: CGFloat(width), height: CGFloat(height))
                     let likesCount = subJson["favorites_count"].int!
                     let commentsCount = subJson["comments_count"].int!

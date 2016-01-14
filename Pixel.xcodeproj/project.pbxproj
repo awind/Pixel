@@ -55,6 +55,7 @@
 		A5E12F361C1FC07800B86C46 /* ImageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E12F341C1FC07800B86C46 /* ImageDetailTableViewCell.swift */; };
 		A5E12F371C1FC07800B86C46 /* ImageDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E12F351C1FC07800B86C46 /* ImageDetailTableViewCell.xib */; };
 		A5E12F3A1C1FD69300B86C46 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E12F381C1FD69300B86C46 /* DetailImageViewController.swift */; };
+		A5E3F7E21C43A9C50029480A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3F7E11C43A9C50029480A /* Logger.swift */; };
 		A5F19CFA1C327FFE0065EA8F /* ImageInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F19CF91C327FFE0065EA8F /* ImageInfoCell.swift */; };
 		A5F19CFD1C3283060065EA8F /* DetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F19CFB1C3283060065EA8F /* DetailInfoTableViewCell.swift */; };
 		A5F19CFE1C3283060065EA8F /* DetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F19CFC1C3283060065EA8F /* DetailInfoTableViewCell.xib */; };
@@ -117,6 +118,7 @@
 		A5E12F341C1FC07800B86C46 /* ImageDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A5E12F351C1FC07800B86C46 /* ImageDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A5E12F381C1FD69300B86C46 /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
+		A5E3F7E11C43A9C50029480A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A5F19CF91C327FFE0065EA8F /* ImageInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInfoCell.swift; sourceTree = "<group>"; };
 		A5F19CFB1C3283060065EA8F /* DetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		A5F19CFC1C3283060065EA8F /* DetailInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				A5D319061C1800AF00E56274 /* SwiftyJSON.swift */,
 				A522090D1C3240D8004FFFFF /* DownloadImageActivity.swift */,
 				A57911421C3A349400C8052A /* Account.swift */,
+				A5E3F7E11C43A9C50029480A /* Logger.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				A52208FF1C3139E7004FFFFF /* TitleHeaderTableViewCell.swift in Sources */,
 				A5F19CFA1C327FFE0065EA8F /* ImageInfoCell.swift in Sources */,
 				A575880A1C1039F6006014F7 /* ImageCollectionViewController.swift in Sources */,
+				A5E3F7E21C43A9C50029480A /* Logger.swift in Sources */,
 				A57588081C1039F6006014F7 /* AppDelegate.swift in Sources */,
 				A502ED4C1C13D41F006382FA /* PixelOAuthClient.swift in Sources */,
 				A502ED6B1C13F844006382FA /* AuthViewController.swift in Sources */,
@@ -581,6 +585,7 @@
 				INFOPLIST_FILE = Pixel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = me.awind.Pixel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -604,6 +609,7 @@
 				INFOPLIST_FILE = Pixel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = me.awind.Pixel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
