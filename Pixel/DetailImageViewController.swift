@@ -152,12 +152,12 @@ class DetailImageViewController: UIViewController {
     func votePhoto(sender: UIButton) {
         if !Account.checkIsLogin() {
 
-            let alert = UIAlertController(title: nil, message: "未登录无法赞这张照片，现在去登录吗？", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: nil, message: NSLocalizedString("LOGIN_MESSAGE", comment: "loginMessage"), preferredStyle: UIAlertControllerStyle.Alert)
             
-            let alertConfirm = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { alertConfirm in
+            let alertConfirm = UIAlertAction(title: NSLocalizedString("CONFIRM", comment: "confirm"), style: UIAlertActionStyle.Default) { alertConfirm in
                 self.presentViewController(UINavigationController(rootViewController: AuthViewController()), animated: true, completion: nil)
             }
-            let cancel = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (cancle) -> Void in
+            let cancel = UIAlertAction(title: NSLocalizedString("CANCEL", comment: "confirm"), style: UIAlertActionStyle.Cancel) { (cancle) -> Void in
                 
             }
             
@@ -188,12 +188,12 @@ class DetailImageViewController: UIViewController {
     
     func commentTapped() {
         if !Account.checkIsLogin() {
-            let alert = UIAlertController(title: nil, message: "未登录无法赞这张照片，现在去登录吗？", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: nil, message: NSLocalizedString("LOGIN_MESSAGE", comment: "loginMessage"), preferredStyle: UIAlertControllerStyle.Alert)
             
-            let alertConfirm = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { alertConfirm in
+            let alertConfirm = UIAlertAction(title: NSLocalizedString("CONFIRM", comment: "confirm"), style: UIAlertActionStyle.Default) { alertConfirm in
                 self.presentViewController(UINavigationController(rootViewController: AuthViewController()), animated: true, completion: nil)
             }
-            let cancel = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (cancle) -> Void in
+            let cancel = UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: UIAlertActionStyle.Cancel) { (cancle) -> Void in
                 
             }
             
@@ -204,23 +204,22 @@ class DetailImageViewController: UIViewController {
             return
         }
         
-        let alert = UIAlertController(title: nil, message: "评论这张图片", preferredStyle: .Alert)
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("COMMENT_PHOTO", comment: "commentPhoto"), preferredStyle: .Alert)
         
         alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-            textField.placeholder = "请输入评论内容"
+            textField.placeholder = NSLocalizedString("COMMENT_TEXT_FIELD_HINT", comment: "commentHint")
         })
         
-        alert.addAction(UIAlertAction(title: "评论", style: .Default, handler: { (action) -> Void in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("COMMENT", comment: "comment"), style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             if let commentBody = textField.text {
                 Alamofire.request(Router.CommentPhoto(self.user.id, commentBody))
                     .responseSwiftyJSON { response in
-//                        print("\(response)")
                         
                 }
             }
         }))
-        alert.addAction(UIAlertAction(title: "取消", style: .Default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     

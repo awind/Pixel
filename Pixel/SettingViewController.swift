@@ -50,7 +50,7 @@ class SettingViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func clear(sender: UIButton) {
         let message = "\(self.size/(1024*1024))MB缓存"
-        let alert = UIAlertController(title: "清除缓存", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: NSLocalizedString("CLEAR_CACHE", comment: "clearCache"), message: message, preferredStyle: UIAlertControllerStyle.Alert)
 
         let alertConfirm = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { alertConfirm in
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -64,7 +64,7 @@ class SettingViewController: UIViewController, MFMailComposeViewControllerDelega
             })
         
         }
-        let cancel = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (cancle) -> Void in
+        let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: "cancel"), style: UIAlertActionStyle.Cancel) { (cancle) -> Void in
             
         }
         
@@ -89,7 +89,7 @@ class SettingViewController: UIViewController, MFMailComposeViewControllerDelega
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
         } else {
-            self.showSendMailErrorAlert()
+            //self.showSendMailErrorAlert()
         }
     }
     

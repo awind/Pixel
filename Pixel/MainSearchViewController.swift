@@ -26,7 +26,7 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, CAPSPageM
 
         self.view.backgroundColor = UIColor.whiteColor()
         searchBar.frame = CGRectMake(0, 0, self.view.frame.width-20, self.view.frame.height)
-        searchBar.placeholder = "搜索图片或用户"
+        searchBar.placeholder = NSLocalizedString("SEARCH_HINT", comment: "searchHint")
         let leftNavBarButton = UIBarButtonItem(customView: searchBar)
         searchBar.delegate = self
         searchBar.showsCancelButton = true

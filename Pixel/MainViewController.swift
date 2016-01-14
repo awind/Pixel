@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         var controllerArray : [UIViewController] = []
         
         let popularVC = ImageCollectionViewController()
-        popularVC.title = "Popular"
+        popularVC.title = NSLocalizedString("TITLE_POPULAR", comment: "")
         popularVC.requestType = Int(0)
         popularVC.parentNavigationController = self.navigationController
         controllerArray.append(popularVC)

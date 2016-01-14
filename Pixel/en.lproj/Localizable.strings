@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  Pixel
+
+  Created by SongFei on 16/1/14.
+  Copyright © 2016年 SongFei. All rights reserved.
+*/
+TITLE_POPULAR = "Popular";
+TITLE_HIGHRATED = "HighestRated";
+TITLE_UPCOMING = "Upcoming";
+TITLE_EDITOR = "Editor";
+
+// guide
+TOURIST = "Tourist";
+SIGN_IN = "Sign In";
+
+// photo detail
+LIKES = "Likes";
+VIEWS = "Views";
+COMMENT = "Comment";
+MORE = "More";
+
+COMMENT_PHOTO = "Comment this photo";
+COMMENT_TEXT_FIELD_HINT = "Please input comment body";
+
+
+
+// user info
+PHOTOS = "Photos";
+FRIENDS = "Friends";
+FOLLOWERS = "Followers";
+EMAIL = "Email";
+LOCATION = "Location";
+DOMAIN = "Domain";
+AVATAR_SIGN_IN = "Click avatar to SignIn";
+
+// settings
+CLEAR_CACHE = "Clear Cache";
+FEEDBACK = "Feedback";
+ABOUT = "About Pixel";
+RATE = "Review for Pixel";
+
+// search
+SEARCH_HINT = "Seach for photos or peoples";
+SEARCH_PHOTO = "Photo";
+SEARCH_PEOPLE = "People";
+
+
+LOGIN_MESSAGE = "You are not signin, Now go to login?";
+CONFIRM = "OK";
+CANCEL = "Cancel";
+

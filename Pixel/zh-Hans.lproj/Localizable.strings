@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  Pixel
+
+  Created by SongFei on 16/1/14.
+  Copyright © 2016年 SongFei. All rights reserved.
+*/
+TITLE_POPULAR = "Popular";
+TITLE_HIGHRATED = "HighestRated";
+TITLE_UPCOMING = "Upcoming";
+TITLE_EDITOR = "Editor";
+
+
+// guide
+TOURIST = "随便看看";
+SIGN_IN = "登录";
+
+// photo detail
+LIKES = "赞";
+VIEWS = "浏览";
+COMMENT = "评论";
+MORE = "更多";
+
+COMMENT_PHOTO = "评论这张图片";
+COMMENT_TEXT_FIELD_HINT = "请输入评论内容";
+
+
+// user info
+PHOTOS = "Photos";
+FRIENDS = "Friends";
+FOLLOWERS = "Followers";
+EMAIL = "Email";
+LOCATION = "Location";
+DOMAIN = "Domain";
+AVATAR_SIGN_IN = "点击头像登录";
+
+// settings
+CLEAR_CACHE = "清除缓存";
+FEEDBACK = "反馈";
+ABOUT = "关于Pixel";
+RATE = "在App Store给Pixel评分";
+
+// search
+SEARCH_HINT = "搜索照片或用户";
+SEARCH_PHOTO = "照片";
+SEARCH_PEOPLE = "用户";
+
+
+LOGIN_MESSAGE = "您没有登陆，现在去登录吗?";
+CONFIRM = "好的";
+CANCEL = "取消";
+
