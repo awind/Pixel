@@ -84,6 +84,7 @@
 		A509B0441C4768040015C18D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A509B0451C4768060015C18D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A509B0461C488D500015C18D /* ReportPhotoActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPhotoActivity.swift; sourceTree = "<group>"; };
+		A509B0481C48C4E30015C18D /* PreProcessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreProcessorMacros.h; sourceTree = "<group>"; };
 		A52208F31C300F80004FFFFF /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
 		A52208F51C300F8D004FFFFF /* PeopleSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleSearchViewController.swift; sourceTree = "<group>"; };
 		A52208F91C30E5D8004FFFFF /* UserSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -285,6 +286,7 @@
 				A57911421C3A349400C8052A /* Account.swift */,
 				A5E3F7E11C43A9C50029480A /* Logger.swift */,
 				A509B0461C488D500015C18D /* ReportPhotoActivity.swift */,
+				A509B0481C48C4E30015C18D /* PreProcessorMacros.h */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -620,7 +622,7 @@
 				INFOPLIST_FILE = Pixel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = me.awind.Pixel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -644,7 +646,7 @@
 				INFOPLIST_FILE = Pixel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = me.awind.Pixel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
