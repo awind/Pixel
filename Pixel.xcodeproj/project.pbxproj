@@ -13,6 +13,7 @@
 		A502ED5D1C13E29B006382FA /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502ED5C1C13E29B006382FA /* Dictionary+Extension.swift */; };
 		A502ED6B1C13F844006382FA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502ED6A1C13F844006382FA /* AuthViewController.swift */; };
 		A509B03F1C4767FE0015C18D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A509B0411C4767FE0015C18D /* Localizable.strings */; };
+		A509B0471C488D500015C18D /* ReportPhotoActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509B0461C488D500015C18D /* ReportPhotoActivity.swift */; };
 		A52208F41C300F80004FFFFF /* PhotoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52208F31C300F80004FFFFF /* PhotoSearchViewController.swift */; };
 		A52208F61C300F8D004FFFFF /* PeopleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52208F51C300F8D004FFFFF /* PeopleSearchViewController.swift */; };
 		A52208FB1C30E5D8004FFFFF /* UserSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52208F91C30E5D8004FFFFF /* UserSearchTableViewCell.swift */; };
@@ -82,6 +83,7 @@
 		A509B0431C4768030015C18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A509B0441C4768040015C18D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A509B0451C4768060015C18D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A509B0461C488D500015C18D /* ReportPhotoActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPhotoActivity.swift; sourceTree = "<group>"; };
 		A52208F31C300F80004FFFFF /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
 		A52208F51C300F8D004FFFFF /* PeopleSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleSearchViewController.swift; sourceTree = "<group>"; };
 		A52208F91C30E5D8004FFFFF /* UserSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				A522090D1C3240D8004FFFFF /* DownloadImageActivity.swift */,
 				A57911421C3A349400C8052A /* Account.swift */,
 				A5E3F7E11C43A9C50029480A /* Logger.swift */,
+				A509B0461C488D500015C18D /* ReportPhotoActivity.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				A579113D1C37D6A900C8052A /* RequestType.swift in Sources */,
 				A52FB0CD1C27D37C008D6626 /* CHTCollectionViewWaterfallLayout.swift in Sources */,
 				A57911431C3A349400C8052A /* Account.swift in Sources */,
+				A509B0471C488D500015C18D /* ReportPhotoActivity.swift in Sources */,
 				A5B59AE51C117B85009C1EBF /* Router.swift in Sources */,
 				A52209051C313E07004FFFFF /* CommentHeaderTableViewCell.swift in Sources */,
 				A52208FF1C3139E7004FFFFF /* TitleHeaderTableViewCell.swift in Sources */,

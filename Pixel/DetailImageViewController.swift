@@ -181,8 +181,12 @@ class DetailImageViewController: UIViewController {
     func shareTapped() {
         let urlToShare = self.photoInfo.rawPicUrl!
         let array = ["\(urlToShare)"]
-        //let applicationActivities = [DownloadImageActivity()]
-        let activityVC = UIActivityViewController(activityItems: array, applicationActivities: nil)
+        let reportActivity = ReportPhotoActivity()
+        reportActivity.photoId = self.photoInfo.id
+        reportActivity.viewcontroller = self
+        reportActivity.view = self.view
+        let applicationActivities = [reportActivity]
+        let activityVC = UIActivityViewController(activityItems: array, applicationActivities: applicationActivities)
         self.presentViewController(activityVC, animated: true, completion: nil)
     }
     

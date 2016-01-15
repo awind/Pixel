@@ -11,6 +11,8 @@ TITLE_UPCOMING = "Upcoming";
 TITLE_EDITOR = "Editor";
 
 // guide
+POEM = "Here, where the land ends\n and the sea begins";
+AUTHOR = " - Luís de Camões";
 TOURIST = "Tourist";
 SIGN_IN = "Sign In";
 
@@ -23,6 +25,12 @@ MORE = "More";
 COMMENT_PHOTO = "Comment this photo";
 COMMENT_TEXT_FIELD_HINT = "Please input comment body";
 
+REPORT = "Report";
+REPORT_ALERT_MESSAGE = "Report this photo";
+OFFENSIVE = "Offensive(rude, obscene)";
+SPAM = "Spam(ads, self-promotion)";
+COPYRIGHT = "Copyright(plagiarism, stealing)";
+ADULTCONTENT = "Adult Content";
 
 
 // user info

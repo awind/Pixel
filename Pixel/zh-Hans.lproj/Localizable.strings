@@ -12,6 +12,8 @@ TITLE_EDITOR = "Editor";
 
 
 // guide
+POEM = "大地由此结束，沧海由此开始";
+AUTHOR = "- 卡蒙斯";
 TOURIST = "随便看看";
 SIGN_IN = "登录";
 
@@ -23,6 +25,13 @@ MORE = "更多";
 
 COMMENT_PHOTO = "评论这张图片";
 COMMENT_TEXT_FIELD_HINT = "请输入评论内容";
+
+REPORT = "举报";
+REPORT_ALERT_MESSAGE = "举报这张图片";
+OFFENSIVE = "Offensive(rude, obscene)";
+SPAM = "Spam(ads, self-promotion)";
+COPYRIGHT = "Copyright(plagiarism, stealing)";
+ADULTCONTENT = "Adult Content";
 
 
 // user info

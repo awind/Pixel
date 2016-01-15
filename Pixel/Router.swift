@@ -31,6 +31,7 @@ enum Router: URLRequestConvertible {
     case UserFollowers(Int, Int)
     case FollowUser(Int)
     case UnFollowUser(Int)
+    case Report(Int, Int, String)
     
     private var method: Alamofire.Method {
         switch self {
@@ -42,6 +43,8 @@ enum Router: URLRequestConvertible {
             return .POST
         case .UnFollowUser(_):
             return .DELETE
+        case .Report(_, _, _):
+            return .POST
         default:
             return .GET
         }
@@ -210,7 +213,14 @@ enum Router: URLRequestConvertible {
                     "oauth_token": oauthToken,
                     "vote": "\(vote)"
                 ]
-                return("photos/\(id)/vote", params)
+                return ("photos/\(id)/vote", params)
+            case .Report(let photoId, let reason, let reasonBody):
+                let params = [
+                    "consumer_key": Router.consumerKey,
+                    "reason": "\(reason)",
+                    "reason_details": reasonBody
+                ]
+                return ("photos/\(photoId)/report", params)
             }
         }()
         
