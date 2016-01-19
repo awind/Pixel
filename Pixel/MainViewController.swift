@@ -35,19 +35,19 @@ class MainViewController: UIViewController {
         controllerArray.append(popularVC)
         
         let highRatedVC = ImageCollectionViewController()
-        highRatedVC.title = "HighestRated"
+        highRatedVC.title = NSLocalizedString("TITLE_HIGHRATED", comment: "")
         highRatedVC.requestType = Int(1)
         highRatedVC.parentNavigationController = self.navigationController
         controllerArray.append(highRatedVC)
         
         let upcomimgVC = ImageCollectionViewController()
-        upcomimgVC.title = "Upcoming"
+        upcomimgVC.title = NSLocalizedString("TITLE_UPCOMING", comment: "")
         upcomimgVC.requestType = Int(2)
         upcomimgVC.parentNavigationController = self.navigationController
         controllerArray.append(upcomimgVC)
         
         let editorVC = ImageCollectionViewController()
-        editorVC.title = "Editor"
+        editorVC.title = NSLocalizedString("TITLE_EDITOR", comment: "")
         editorVC.requestType = Int(3)
         editorVC.parentNavigationController = self.navigationController
         controllerArray.append(editorVC)

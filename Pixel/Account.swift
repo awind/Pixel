@@ -23,7 +23,6 @@ class Account {
         var oauthToken: String = ""
         if let accessToken = userDefaults.valueForKey("accessToken") {
             oauthToken = accessToken as! String
-//            print("oauthToken: \(oauthToken)")
         }
         return oauthToken
     }

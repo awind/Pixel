@@ -50,7 +50,8 @@ class ImageInfoViewController: UIViewController, UITableViewDelegate, UITableVie
                 
                 let timeDic = InfoCell(key: "Create At", value: createDate)
                 let formatDic = InfoCell(key: "Format", value: photo["image_format"].string!)
-                let licenseDic = InfoCell(key: "License Type", value: "\(photo["license_type"].int!)")
+                let type = LicenseType(rawValue: photo["license_type"].int!)!
+                let licenseDic = InfoCell(key: "License Type", value: type.toType())
                 let dimension = InfoCell(key: "Dimension", value:  "\(width)x\(height)")
                 self.basicInfos = [timeDic, formatDic, licenseDic, dimension]
                 
