@@ -6,10 +6,9 @@
 Pixel is a unoffical client for 500px write in Swift. Pixel helps you explore exciting photos in 500px.You can view diffent streams.
 
 # Screenshots
-<img src="./screenshots/01.png" alt="screenshot" title="screenshot" width="270" height="486" />
-<img src="screenshots/02.png" alt="screenshot" title="screenshot" width="270" height="486" /> 
-<img src="screenshots/03.png" alt="screenshot" title="screenshot" width="270" height="486" /> 
-<img src="screenshots/04.png" alt="screenshot" title="screenshot" width="270" height="486" />  
+<img src="./screenshots/01.jpg" alt="screenshot" title="screenshot" width="270" height="486" />
+<img src="screenshots/02.jpg" alt="screenshot" title="screenshot" width="270" height="486" /> 
+<img src="screenshots/03.jpg" alt="screenshot" title="screenshot" width="270" height="486" /> 
 
 # Third-party libraries used
 
