@@ -11,11 +11,11 @@ import UIKit
 class ImageInfoTableViewCell: UITableViewCell {
     
 
+    @IBOutlet weak var descript: UITextView!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var likeBtn: UIButton!
     @IBOutlet weak var more: UIButton!
     @IBOutlet weak var share: UIButton!
-    @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var views: UILabel!
     @IBOutlet weak var userAvatar: UIImageView!
