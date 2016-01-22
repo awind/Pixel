@@ -55,8 +55,6 @@
 		A5D319091C1800F500E56274 /* Alamofire+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D319081C1800F500E56274 /* Alamofire+SwiftyJSON.swift */; };
 		A5D3190B1C1804C400E56274 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3190A1C1804C400E56274 /* User.swift */; };
 		A5DE45A01C183598002F97CE /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE459F1C183598002F97CE /* GuideViewController.swift */; };
-		A5E12F361C1FC07800B86C46 /* ImageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E12F341C1FC07800B86C46 /* ImageDetailTableViewCell.swift */; };
-		A5E12F371C1FC07800B86C46 /* ImageDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E12F351C1FC07800B86C46 /* ImageDetailTableViewCell.xib */; };
 		A5E12F3A1C1FD69300B86C46 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E12F381C1FD69300B86C46 /* DetailImageViewController.swift */; };
 		A5E3F7E21C43A9C50029480A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3F7E11C43A9C50029480A /* Logger.swift */; };
 		A5F19CFA1C327FFE0065EA8F /* ImageInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F19CF91C327FFE0065EA8F /* ImageInfoCell.swift */; };
@@ -130,8 +128,6 @@
 		A5D319081C1800F500E56274 /* Alamofire+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		A5D3190A1C1804C400E56274 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5DE459F1C183598002F97CE /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
-		A5E12F341C1FC07800B86C46 /* ImageDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailTableViewCell.swift; sourceTree = "<group>"; };
-		A5E12F351C1FC07800B86C46 /* ImageDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A5E12F381C1FD69300B86C46 /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
 		A5E3F7E11C43A9C50029480A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A5F19CF91C327FFE0065EA8F /* ImageInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInfoCell.swift; sourceTree = "<group>"; };
@@ -246,7 +242,6 @@
 				A57588191C103A82006014F7 /* ImageCollectionViewCell.swift */,
 				A5419EA71C1968F8008402A5 /* CAPSPageMenu.swift */,
 				A5BDE8411C1D97AA009AD542 /* CommentTableViewCell.swift */,
-				A5E12F341C1FC07800B86C46 /* ImageDetailTableViewCell.swift */,
 				A52208F91C30E5D8004FFFFF /* UserSearchTableViewCell.swift */,
 				A52208FD1C3139E7004FFFFF /* TitleHeaderTableViewCell.swift */,
 				A52209031C313E07004FFFFF /* CommentHeaderTableViewCell.swift */,
@@ -267,7 +262,6 @@
 				A579113A1C37C30900C8052A /* UserInfoViewController.xib */,
 				BEFFB2FC1C340DB00049348E /* SettingViewController.xib */,
 				A5BDE8421C1D97AA009AD542 /* CommentTableViewCell.xib */,
-				A5E12F351C1FC07800B86C46 /* ImageDetailTableViewCell.xib */,
 				A52208FA1C30E5D8004FFFFF /* UserSearchTableViewCell.xib */,
 				A575880E1C1039F6006014F7 /* Assets.xcassets */,
 				A57588101C1039F6006014F7 /* LaunchScreen.storyboard */,
@@ -374,7 +368,6 @@
 				A52209001C3139E7004FFFFF /* TitleHeaderTableViewCell.xib in Resources */,
 				A522090A1C314007004FFFFF /* ImageInfoTableViewCell.xib in Resources */,
 				A5BDE8441C1D97AA009AD542 /* CommentTableViewCell.xib in Resources */,
-				A5E12F371C1FC07800B86C46 /* ImageDetailTableViewCell.xib in Resources */,
 				A5F19CFE1C3283060065EA8F /* DetailInfoTableViewCell.xib in Resources */,
 				BEFFB2FE1C340DB00049348E /* SettingViewController.xib in Resources */,
 				A52208FC1C30E5D8004FFFFF /* UserSearchTableViewCell.xib in Resources */,
@@ -489,7 +482,6 @@
 				A5D319071C1800AF00E56274 /* SwiftyJSON.swift in Sources */,
 				A5BDE8431C1D97AA009AD542 /* CommentTableViewCell.swift in Sources */,
 				A502ED531C13D6C1006382FA /* String+Extension.swift in Sources */,
-				A5E12F361C1FC07800B86C46 /* ImageDetailTableViewCell.swift in Sources */,
 				A5DE45A01C183598002F97CE /* GuideViewController.swift in Sources */,
 				A5D3190B1C1804C400E56274 /* User.swift in Sources */,
 				A54198C21C1EA6FA006FDFF8 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
