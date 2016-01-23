@@ -57,4 +57,11 @@ SEARCH_PEOPLE = "People";
 LOGIN_MESSAGE = "You are not signin, Now go to login?";
 CONFIRM = "OK";
 CANCEL = "Cancel";
+LOADING = "Loading  ...";
+PULL_DOWN_REFESH = "Pull down to refresh";
+RELEASE_TO_REFRESH = "Release to refresh";
+CLICK_TO_REFRESH = "Click or drag up to refresh";
+LOADING_MORE = "Loading more ...";
+NO_MORE_DATA = "No more data";
+
 

@@ -54,7 +54,7 @@ class AuthViewController: UIViewController, UIWebViewDelegate {
         
         hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = .Indeterminate
-        hud.labelText = "Loading"
+        hud.labelText = NSLocalizedString("LOADING", comment: "loading")
         self.view.addSubview(hud)
         
         let storage : NSHTTPCookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
@@ -94,8 +94,7 @@ class AuthViewController: UIViewController, UIWebViewDelegate {
 
                     let userDefault = NSUserDefaults.standardUserDefaults()
                     userDefault.setValue(accessToken?.key, forKey: "accessToken")
-                    let userDefaults = NSUserDefaults.standardUserDefaults()
-                    userDefaults.setBool(true, forKey: "first")
+                    userDefault.setBool(true, forKey: "first")
                     
                     self.presentViewController(UINavigationController(rootViewController: MainViewController()), animated: true, completion: nil)
                     

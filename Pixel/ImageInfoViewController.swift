@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import MBProgressHUD
 
 class ImageInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,88 +21,100 @@ class ImageInfoViewController: UIViewController, UITableViewDelegate, UITableVie
     var photoEXIFs = [InfoCell]()
     
     var tableView: UITableView?
+    var hud: MBProgressHUD?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "More"
+        self.view.backgroundColor = UIColor.whiteColor()
+        
         tableView = UITableView(frame: screenBounds)
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.registerNib(UINib(nibName: "DetailInfoTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_IDENTIFIER)
         
         self.view.addSubview(tableView!)
+        self.tableView?.hidden = true
         
         fetchImageInfo()
     }
     
     func fetchImageInfo() {
+        hud = MBProgressHUD.showHUDAddedTo(self.view!, animated: true)
+        hud!.mode = MBProgressHUDMode.Indeterminate
+        hud!.labelText = NSLocalizedString("LOADING", comment: "loading")
+        hud!.show(true)
+        
         Alamofire.request(Router.PhotoInfo(self.imageId!, ImageSize.Medium))
             .responseSwiftyJSON { response in
-//                print(response)
                 
                 guard let json = response.result.value else {return}
+                self.parse(json)
                 
-                let photo = json["photo"]
-                let createAt = photo["created_at"].string!
-                let index = createAt.startIndex.advancedBy(10)
-                let createDate = createAt.substringToIndex(index)
-                let width = photo["width"].int!
-                let height = photo["height"].int!
-                
-                let timeDic = InfoCell(key: "Create At", value: createDate)
-                let formatDic = InfoCell(key: "Format", value: photo["image_format"].string!)
-                let type = LicenseType(rawValue: photo["license_type"].int!)!
-                let licenseDic = InfoCell(key: "License Type", value: type.toType())
-                let dimension = InfoCell(key: "Dimension", value:  "\(width)x\(height)")
-                self.basicInfos = [timeDic, formatDic, licenseDic, dimension]
-                
-                let rating = InfoCell(key: "Rating", value: "\(photo["rating"].int!)")
-                let fav = InfoCell(key: "Favorites", value: "\(photo["favorites_count"].int!)")
-                let votes = InfoCell(key: "Votes", value: "\(photo["votes_count"].int!)")
-                let views = InfoCell(key: "Views", value: "\(photo["times_viewed"].int!)")
-                let comments = InfoCell(key: "Comments", value: "\(photo["comments_count"].int!)")
-                self.photoStars = [rating, fav, votes, views, comments]
-                
-                var cameraName = ""
-                if let cameraInfo = photo["camera"].string {
-                    cameraName = cameraInfo
-                }
-                let camera = InfoCell(key: "Camera", value: cameraName)
-                var apertureInfo = ""
-                if let aper = photo["aperture"].string {
-                    apertureInfo = aper
-                }
-                let aperture = InfoCell(key: "Aperture", value: apertureInfo)
-                
-                var flength = ""
-                if let fl = photo["focal_length"].string {
-                    flength = fl
-                }
-                let focalLength = InfoCell(key: "Focal Length", value: flength)
-                
-                var isoInfo = ""
-                if let ii = photo["iso"].string {
-                    isoInfo = ii
-                }
-                let iso = InfoCell(key: "ISO", value: isoInfo)
-                
-                var shutterInfo = ""
-                if let ss = photo["shutter_speed"].string {
-                    shutterInfo = ss
-                }
-                let shutterSpeed = InfoCell(key: "Shutter Speed", value: shutterInfo)
-                
-                var takenDate = ""
-                if let ti = photo["taken_at"].string {
-                    takenDate = ti.substringToIndex(index)
-                }
-                let taken = InfoCell(key: "Taken", value: takenDate)
-                self.photoEXIFs = [camera, aperture, focalLength, iso, shutterSpeed, taken]
-                
+                self.tableView?.hidden = false
+                self.hud?.hide(true)
                 self.tableView?.reloadData()
-                
         }
         
+    }
+    
+    func parse(json:JSON) {
+        let photo = json["photo"]
+        let createAt = photo["created_at"].string!
+        let index = createAt.startIndex.advancedBy(10)
+        let createDate = createAt.substringToIndex(index)
+        let width = photo["width"].int!
+        let height = photo["height"].int!
+        
+        let timeDic = InfoCell(key: "Create At", value: createDate)
+        let formatDic = InfoCell(key: "Format", value: photo["image_format"].string!)
+        let type = LicenseType(rawValue: photo["license_type"].int!)!
+        let licenseDic = InfoCell(key: "License Type", value: type.toType())
+        let dimension = InfoCell(key: "Dimension", value:  "\(width)x\(height)")
+        self.basicInfos = [timeDic, formatDic, licenseDic, dimension]
+        
+        let rating = InfoCell(key: "Rating", value: "\(photo["rating"].int!)")
+        let fav = InfoCell(key: "Favorites", value: "\(photo["favorites_count"].int!)")
+        let votes = InfoCell(key: "Votes", value: "\(photo["votes_count"].int!)")
+        let views = InfoCell(key: "Views", value: "\(photo["times_viewed"].int!)")
+        let comments = InfoCell(key: "Comments", value: "\(photo["comments_count"].int!)")
+        self.photoStars = [rating, fav, votes, views, comments]
+        
+        var cameraName = ""
+        if let cameraInfo = photo["camera"].string {
+            cameraName = cameraInfo
+        }
+        let camera = InfoCell(key: "Camera", value: cameraName)
+        var apertureInfo = ""
+        if let aper = photo["aperture"].string {
+            apertureInfo = aper
+        }
+        let aperture = InfoCell(key: "Aperture", value: apertureInfo)
+        
+        var flength = ""
+        if let fl = photo["focal_length"].string {
+            flength = fl
+        }
+        let focalLength = InfoCell(key: "Focal Length", value: flength)
+        
+        var isoInfo = ""
+        if let ii = photo["iso"].string {
+            isoInfo = ii
+        }
+        let iso = InfoCell(key: "ISO", value: isoInfo)
+        
+        var shutterInfo = ""
+        if let ss = photo["shutter_speed"].string {
+            shutterInfo = ss
+        }
+        let shutterSpeed = InfoCell(key: "Shutter Speed", value: shutterInfo)
+        
+        var takenDate = ""
+        if let ti = photo["taken_at"].string {
+            takenDate = ti.substringToIndex(index)
+        }
+        let taken = InfoCell(key: "Taken", value: takenDate)
+        self.photoEXIFs = [camera, aperture, focalLength, iso, shutterSpeed, taken]
     }
     
     

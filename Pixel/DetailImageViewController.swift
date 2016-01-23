@@ -18,7 +18,6 @@ class DetailImageViewController: UIViewController {
     let CELL_IDENTIFIER = "CommentCell"
     
     var imageView: UIImageView?
-    var progressHud: MBProgressHUD?
     var tableView: UITableView?
     
     var photoInfo: PhotoInfo!
@@ -48,40 +47,41 @@ class DetailImageViewController: UIViewController {
         // image view & MBProgressHUD
         self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: self.imageHeight))
         self.imageView?.contentMode = .ScaleAspectFit
+
         // table view
         self.tableView = UITableView(frame: CGRectMake(0, 0, screenWidth, screenHeight))
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
+        self.tableView?.separatorStyle = .None
+        self.tableView?.estimatedRowHeight = 72
+        self.tableView?.rowHeight = UITableViewAutomaticDimension
+        
+        tableView?.tableHeaderView = imageView
+        self.tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
         self.tableView?.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_IDENTIFIER)
         self.tableView?.registerNib(UINib(nibName: "TitleHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_TITLE_HEADER)
         self.tableView?.registerNib(UINib(nibName: "CommentHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_COMMENT_HEADER)
         self.tableView?.registerNib(UINib(nibName: "ImageInfoTableViewCell", bundle: nil), forCellReuseIdentifier: IMAGE_INFO_CELL)
-        tableView?.separatorStyle = .None
-        tableView?.estimatedRowHeight = 72
-        tableView?.rowHeight = UITableViewAutomaticDimension
         
-        tableView?.tableHeaderView = imageView
-        self.tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         self.view.addSubview(self.tableView!)
         
-        self.progressHud?.show(true)
+
         // display image
-        self.progressHud?.show(true)
         self.imageView?.sd_setImageWithURL(NSURL(string: self.photoInfo.smallPicUrl!))
         let sdWebImageManager = SDWebImageManager.sharedManager()
         sdWebImageManager.downloadImageWithURL(NSURL(string: self.photoInfo.rawPicUrl!),
             options: .LowPriority,
             progress: { (receiveSize, expectSize) in
                 dispatch_async(dispatch_get_main_queue(), {
-                    let progress = Float(receiveSize) / Float(expectSize)
-                    //self.progressHud?.progress = progress
+                    //TODO: image load progress
                 })
             },
             completed: {[weak self] (image, error, cached, finished, url) in
                 if let wSelf = self {
                     dispatch_async(dispatch_get_main_queue(), {
                         wSelf.imageView!.image = image
-                        //wSelf.progressHud!.hide(true)
+                        //TODO: image load finish
                     })
                 }
             })

@@ -100,7 +100,7 @@ class ReportPhotoActivity: UIActivity {
             }
         }
         
-        let wronContentAction = UIAlertAction(title: "Wrong content", style: UIAlertActionStyle.Default) { action in
+        let wrongContentAction = UIAlertAction(title: "Wrong content", style: UIAlertActionStyle.Default) { action in
             
         }
         

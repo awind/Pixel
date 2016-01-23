@@ -63,8 +63,19 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.whiteColor()
         collectionView.registerClass(ImageCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: ImageCellIdentifier)
-        self.collectionView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullDownRefresh")
-        self.collectionView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "populatePhotos")
+        
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullDownRefresh")
+        header.setTitle(NSLocalizedString("PULL_DOWN_REFESH", comment: "pull_down_to_refresh"), forState: .Idle)
+        header.setTitle(NSLocalizedString("RELEASE_TO_REFRESH", comment: "release_to_refresh"), forState: .Pulling)
+        header.setTitle(NSLocalizedString("LOADING", comment: "loading"), forState: .Refreshing)
+        header.lastUpdatedTimeLabel?.hidden = true
+        self.collectionView.mj_header = header
+        
+        let footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "populatePhotos")
+        footer.setTitle(NSLocalizedString("CLICK_TO_REFRESH", comment: "click_to_refresh"), forState: .Idle)
+        footer.setTitle(NSLocalizedString("LOADING_MORE", comment: "loading_more"), forState: .Refreshing)
+        footer.setTitle(NSLocalizedString("NO_MORE_DATA", comment: "no_more_data"), forState: .NoMoreData)
+        self.collectionView.mj_footer = footer
         self.collectionView.mj_footer.hidden = true
         
         self.view.addSubview(collectionView)
@@ -72,6 +83,7 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
     
     func populatePhotos() {
         if self.currentPage >= self.totalPage {
+            self.collectionView.mj_footer.endRefreshingWithNoMoreData()
             return
         }
         var request: Router = Router.PopularPhotos(self.currentPage)
@@ -111,7 +123,7 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
             
             if let currentPage = json["current_page"].int, totalPage = json["total_pages"].int {
                 self.currentPage = currentPage
-                self.totalPage = totalPage
+                self.totalPage = 5
             }
             let lastItem = self.photos.count
             for (_, subJson):(String, JSON) in json["photos"] {

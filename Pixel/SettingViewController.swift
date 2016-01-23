@@ -55,7 +55,7 @@ class SettingViewController: UIViewController, MFMailComposeViewControllerDelega
         let alertConfirm = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { alertConfirm in
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             hud.mode = .Determinate
-            hud.labelText = "Loading";
+            hud.labelText = NSLocalizedString("LOADING", comment: "loading")
             dispatch_async(dispatch_get_main_queue(), {
                 self.clearCacheFolder()
                 hud.hide(true)

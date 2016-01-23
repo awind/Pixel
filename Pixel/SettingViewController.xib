@@ -58,7 +58,7 @@
                         <action selector="logout:" destination="-1" eventType="touchUpInside" id="NUy-uT-X8t"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-PV-RpZ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-PV-RpZ">
                     <rect key="frame" x="576" y="177" width="8" height="13"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-ms-a8b">
