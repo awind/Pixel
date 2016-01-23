@@ -6,7 +6,7 @@
 Pixel is a unoffical client for 500px write in Swift. Pixel helps you explore exciting photos in 500px.You can view diffent streams.
 
 # Design 
-Pixel use Sketch to create prototype. You can view project prototype documents in [Design](https://github.com/awind/Pixel/tree/Dev1.0.1/Design) folder.
+Pixel use Sketch to create prototype. You can view project prototype documents in [Dropbox](https://www.dropbox.com/sh/1bclo6bnjf1tp3m/AABEQtTKGpdrhOK_Kalze0qoa?dl=0).
 
 # Screenshots
 <img src="./screenshots/01.jpg" alt="screenshot" title="screenshot" width="270" height="486" />
