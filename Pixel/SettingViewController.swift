@@ -27,7 +27,7 @@ class SettingViewController: UIViewController, MFMailComposeViewControllerDelega
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "done")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(done))
         cacheFolderSize()
         cacheSize.text = "\(size/(1024*1024))MB"
         

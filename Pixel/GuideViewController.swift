@@ -35,7 +35,7 @@ class GuideViewController: UIViewController {
         
         let tourButton = UIButton(frame: CGRectMake(0 , screenHeight-64, screenWidth / 2, 64))
         tourButton.setTitle(NSLocalizedString("TOURIST", comment: "tourist"), forState: .Normal)
-        tourButton.addTarget(self, action: "enter:", forControlEvents: .TouchUpInside)
+        tourButton.addTarget(self, action: #selector(enter), forControlEvents: .TouchUpInside)
         tourButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         tourButton.backgroundColor = UIColor(red: 158/255, green: 63/255, blue: 29/255, alpha: 1.0)
         self.view.addSubview(tourButton)
@@ -43,7 +43,7 @@ class GuideViewController: UIViewController {
         loginButton.setTitle(NSLocalizedString("SIGN_IN", comment: "signIn"), forState: .Normal)
         loginButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         loginButton.backgroundColor = UIColor(red: 66/255, green: 136/255, blue: 217/255, alpha: 1.0)
-        loginButton.addTarget(self, action: "login:", forControlEvents: .TouchUpInside)
+        loginButton.addTarget(self, action: #selector(login), forControlEvents: .TouchUpInside)
         
         self.view.addSubview(loginButton)
     }

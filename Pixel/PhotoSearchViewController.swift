@@ -63,8 +63,8 @@ class PhotoSearchViewController: UIViewController, UICollectionViewDelegate, UIC
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.whiteColor()
         collectionView.registerClass(ImageCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: ImageCellIdentifier)
-        self.collectionView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullDownRefresh")
-        self.collectionView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "searchPhotos")
+        self.collectionView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(pullDownRefresh))
+        self.collectionView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(searchPhotos))
         self.collectionView.mj_header.hidden = true
         
         self.view.addSubview(collectionView)

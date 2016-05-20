@@ -17,8 +17,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Pixel"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_user"), style: .Plain, target: self, action: "userTapped")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "toggleSearch")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_user"), style: .Plain, target: self, action: #selector(userTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(toggleSearch))
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 46.0/255.0, green: 123.0/255.0, blue: 213.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.translucent = true

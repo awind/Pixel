@@ -71,7 +71,7 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
         header.lastUpdatedTimeLabel?.hidden = true
         self.collectionView.mj_header = header
         
-        let footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "populatePhotos")
+        let footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(populatePhotos))
         footer.setTitle(NSLocalizedString("CLICK_TO_REFRESH", comment: "click_to_refresh"), forState: .Idle)
         footer.setTitle(NSLocalizedString("LOADING_MORE", comment: "loading_more"), forState: .Refreshing)
         footer.setTitle(NSLocalizedString("NO_MORE_DATA", comment: "no_more_data"), forState: .NoMoreData)
@@ -121,7 +121,7 @@ class ImageCollectionViewController: UIViewController, UICollectionViewDelegate,
     func parseJSON(json: JSON) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
             
-            if let currentPage = json["current_page"].int, totalPage = json["total_pages"].int {
+            if let currentPage = json["current_page"].int, _ = json["total_pages"].int {
                 self.currentPage = currentPage
                 self.totalPage = 5
             }

@@ -40,8 +40,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.separatorStyle = .None
         tableView.registerNib(UINib(nibName: "UserSearchTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_IDENTIFIER)
-        self.tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullDownRefresh")
-        self.tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "searchUsers")
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(pullDownRefresh))
+        self.tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(searchUsers))
         self.tableView.mj_footer.hidden = true
         self.view.addSubview(tableView)
         self.tableView.mj_header.beginRefreshing()

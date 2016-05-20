@@ -423,7 +423,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/zsh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" a8dbb91c6c25377d1cb8886e9939d5d015d59c3a 931e64bc48f235a7f2cd082a501245d812acc1a7fb9f2edd348a7d03d8bd4c18";
+			shellScript = "";
 		};
 		CCA31C6791E2BDFB90DEC5C0 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

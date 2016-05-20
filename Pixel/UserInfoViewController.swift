@@ -33,9 +33,9 @@ class UserInfoViewController: UIViewController, UIScrollViewDelegate {
         
         self.title = "User"
         if isSelf {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_settings"), style: .Plain, target: self, action: "settings")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_settings"), style: .Plain, target: self, action: #selector(settings))
         } else {
-            rightButton = UIBarButtonItem(title: "Follow", style: UIBarButtonItemStyle.Plain, target: self, action: "updateFollowStatus")
+            rightButton = UIBarButtonItem(title: "Follow", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(updateFollowStatus))
             self.navigationItem.rightBarButtonItem = rightButton
         }
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 46.0/255.0, green: 123.0/255.0, blue: 213.0/255.0, alpha: 1.0)
@@ -56,7 +56,7 @@ class UserInfoViewController: UIViewController, UIScrollViewDelegate {
         } else {
             // not login, add avatar
             avatarImageView.image = UIImage(named: "user_placeholder")
-            let userSingleTap = UITapGestureRecognizer(target: self, action: "userAvatarTapped")
+            let userSingleTap = UITapGestureRecognizer(target: self, action: #selector(userAvatarTapped))
             userSingleTap.numberOfTapsRequired = 1
             avatarImageView.addGestureRecognizer(userSingleTap)
             usernameLabel.text = "点击头像登录"

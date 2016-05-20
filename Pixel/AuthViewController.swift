@@ -47,7 +47,7 @@ class AuthViewController: UIViewController, UIWebViewDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancel")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(cancel))
         webView = UIWebView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
         webView.delegate = self
         self.view.addSubview(webView)

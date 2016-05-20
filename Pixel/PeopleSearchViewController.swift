@@ -46,8 +46,8 @@ class PeopleSearchViewController: UIViewController, UITableViewDelegate, UITable
         tableView.dataSource = self
         tableView.separatorStyle = .None
         tableView.registerNib(UINib(nibName: "UserSearchTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_IDENTIFIER)
-        self.tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullDownRefresh")
-        self.tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "searchUsers")
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(pullDownRefresh))
+        self.tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(searchUsers))
         
         self.view.addSubview(tableView)
     }

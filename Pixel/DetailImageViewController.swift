@@ -34,7 +34,7 @@ class DetailImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Photo Detail"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_share"), style: .Plain, target: self, action: "shareTapped")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_share"), style: .Plain, target: self, action: #selector(shareTapped))
         initViews()
         requestComments()
     }
@@ -268,12 +268,12 @@ extension DetailImageViewController: UITableViewDataSource, UITableViewDelegate 
             infoCell.selectionStyle = .None
             infoCell.bindDataBy(self.photoInfo)
             
-            infoCell.likeBtn.addTarget(self, action: "votePhoto:", forControlEvents: .TouchUpInside)
-            infoCell.share.addTarget(self, action: "commentTapped", forControlEvents: .TouchUpInside)
-            infoCell.more.addTarget(self, action: "moreTapped", forControlEvents: .TouchUpInside)
+            infoCell.likeBtn.addTarget(self, action: #selector(votePhoto), forControlEvents: .TouchUpInside)
+            infoCell.share.addTarget(self, action: #selector(commentTapped), forControlEvents: .TouchUpInside)
+            infoCell.more.addTarget(self, action: #selector(moreTapped), forControlEvents: .TouchUpInside)
             
             infoCell.userAvatar.tag = self.user.id
-            let userSingleTap = UITapGestureRecognizer(target: self, action: "userAvatarTapped:")
+            let userSingleTap = UITapGestureRecognizer(target: self, action: #selector(userAvatarTapped))
             userSingleTap.numberOfTapsRequired = 1
             infoCell.userAvatar.addGestureRecognizer(userSingleTap)
         }
@@ -285,7 +285,7 @@ extension DetailImageViewController: UITableViewDataSource, UITableViewDelegate 
             let comment = self.comments[self.comments.startIndex.advancedBy(indexPath.row)]
             commentCell.bindDataBy(comment)
             
-            let userSingleTap = UITapGestureRecognizer(target: self, action: "userAvatarTapped:")
+            let userSingleTap = UITapGestureRecognizer(target: self, action: #selector(userAvatarTapped))
             userSingleTap.numberOfTapsRequired = 1
             commentCell.avatarImageView.addGestureRecognizer(userSingleTap)
         }
